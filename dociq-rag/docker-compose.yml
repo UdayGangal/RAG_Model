@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: dociq-rag
+    ports:
+      - "8501:8501"
+    environment:
+      # If you're using MongoDB Atlas / a hosted URI, put it in .env instead
+      # and delete the mongo service below.
+      MONGO_URI: mongodb://mongo:27017
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:7
+    container_name: dociq-mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
