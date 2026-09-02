@@ -485,7 +485,7 @@ This project demonstrates practical knowledge of:
 **Uday Gangal**
 
 - GitHub: [UdayGangal](https://github.com/UdayGangal)
-- Repository: [RAG_Model](https://github.com/UdayGangal/RAG_Model)
+- Linkedin: [UdayGangal](www.linkedin.com/in/uday-gangal-085877347)
 
 ---
 
